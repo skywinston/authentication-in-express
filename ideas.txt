@@ -1,0 +1,5 @@
+### Here are some ideas for capstone projects.  Or projects that would be fun to build.
+
+* videonotes - a tool that syncrhonizes an embedded video with a rich note pallete
+* a tool that allows you to input git commands and have an infographicaly representation of the git model that changes based on your commands, so that you can visually understand the model of git.
+* Call sheets for commercial productions that allow you to locations, contacts, and details in a nice visual timeline.
