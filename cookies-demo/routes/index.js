@@ -13,6 +13,8 @@ router.get('/show', function(req, res, next) {
 
 router.get('/delete', function(req, res, next) {
   res.render('index', { title: res.clearCookie("fraggle") }); // Setting it as the title value so that its value renders on the index page
+  // res.clearCookie will delete the value for the key "fraggle" and set the expiration time to some time in the past...
+  // specifically, the exact time the first UNIX server came online #nerdtrivia
 });
 
 module.exports = router;

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .col-lg-6.col-lg-offset-3
+    .page-header
+      h3 Sign In
+    if(errors)
+      include ./signin-error.jade
+    form(id='signin', action='/signin', method='post')
+      .form-group
+        label(for="email") Email
+        input.form-control(id="email", type="email", name="email")
+      .form-group
+        label(for="password") Password
+        input.form-control(id="password", type="password", name="password")
+      input.btn.btn-lg.btn-primary(type='submit', value="Sign In")

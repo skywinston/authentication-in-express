@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .col-lg-6.col-lg-offset-3
+    .page-header
+      h3 Sign Up
+    if(errors)
+      include ./signup-error.jade
+    form(id='signup', action='/signup', method='post')
+      .form-group
+        label(for="email") Email
+        input.form-control(id="email", type="email", name="email")
+      .form-group
+        label(for="password") Password
+        input.form-control(id="password", type="password", name="password")
+      .form-group
+        label(for="password_confirm") Confirm Password
+        input.form-control(id="password_confirm", type="password", name="password_confirm")
+      input.btn.btn-lg.btn-primary(type='submit', value="Sign Up")
+        
+
+        

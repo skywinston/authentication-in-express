@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .col-lg-6.col-lg-offset-3
+  if(!user)
+    h3 Welcome
+    p Please Sign Up or Sign In
+  if(user)
+    h1 Hello #{user}
+    
