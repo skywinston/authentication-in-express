@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .col-lg-6.col-lg-offset-3
+    .page-header
+      h1 Register
+      if(errors)
+      h3.text-danger= errors
+    form(action="register", method="post")
+      .form-group(class="#{0 ? has-error : ''}")
+        label.control-label(for="email") Email
+        input.form-control(type="email" name="email" id="email" value="#{email || ''}")
+      .form-group
+        label.control-label(for="password") Password
+        input.form-control(type="password" name="password" id="password")
+      .form-group
+        label.control-label(for="passwordConfirm") Confirm Password
+        input.form-control(type="password" name="passwordConfirm" id="passwordConfirm") 
+      button.btn.btn-primary(type="submit" style="margin-right: 4px") Register
+      a.btn.btn-default(href="/login") Login
+
+        
