@@ -25,10 +25,20 @@ $(document).ready(function() {
       // Post alert message to user indicating that it found saved form data in localStorage
       $('#messages')
         .append(
-          "<div class='alert alert-success' role='alert'>Found saved form data in localStorage:</div>"
+          "<div class='alert alert-success' role='alert'>Found saved form data in localStorage. <br>  <a class='clearForm'>CLEAR FORM DATA</a></div>"
         );
 
       var formData = $('#signup').serializeArray();
+
+      $('.clearForm')
+        .click(function(e){
+
+          $.each(formData, function(i, obj){
+            $("[name='" + obj.name + "']").val(localStorage.removeItem(obj.name));
+            $('#username').focus();
+          });
+
+        });
 
       $.each(formData, function(i, obj){
         // crafts an attribute selector for each of the previously save form inputs
