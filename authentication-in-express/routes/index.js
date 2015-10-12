@@ -28,6 +28,10 @@ router.route('/signup')
         errors.push("Passwords entered do not match")
       } else if (req.body.password.length < 8){
         errors.push("Password must be at least 8 characters long")
+      } else if (req.body.username.length === 0) {
+        errors.push("Username cannot be blank")
+      } else if (req.body.firstName.length === 0 || req.body.lastName.length === 0) {
+        errors.push("First and Last name must be provided")
       } else if (user){
         console.log("User already exists");
         errors.push("User already exists");

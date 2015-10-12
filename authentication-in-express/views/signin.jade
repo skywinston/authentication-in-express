@@ -9,15 +9,6 @@ block content
       include ./signin-error.jade
     form(id='signin', action='/signin', method='post')
       .form-group
-        label(for="username") Username
-        input.form-control(id="username", type="text", name="username")
-      .form-group
-        label(for="firstName") First Name
-        input.form-control(id="firstName", type="text", name="firstName")
-      .form-group
-        label(for="lastName") Last Name
-        input.form-control(id="lastName", type="text", name="lastName")
-      .form-group
         label(for="email") Email
         input.form-control(id="email", type="email", name="email")
       .form-group
